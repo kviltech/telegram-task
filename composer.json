@@ -1,0 +1,10 @@
+{
+    "name": "master/telegram-parser",
+    "authors": [
+        {
+            "name": "I. Kvilinskiy",
+            "email": "ihor.kvilinskiy@gmail.com"
+        }
+    ],
+    "require": {}
+}
