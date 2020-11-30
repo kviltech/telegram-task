@@ -1,0 +1,8 @@
+madeline_proto_api:
+  app_info:
+    api_id: '2842690'
+    api_hash: 'a488c25eb7ebec26d748e8c803a67668'
+  logger:
+    logger: '0'
+parse_chunk: 50
+

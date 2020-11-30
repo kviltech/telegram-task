@@ -1,1 +1,8 @@
 /vendor/
+*.local.*
+/temp/
+!/temp/.gitkeep
+/media/
+!/media/.gitkeep
+/data/
+!/data/.gitkeep
