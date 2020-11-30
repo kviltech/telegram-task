@@ -64,6 +64,7 @@ class ParseChannel extends Command
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int
+     * @throws \ReflectionException
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
@@ -71,11 +72,12 @@ class ParseChannel extends Command
 
         $authProcess = new AuthProcess($this->telegramApi, $io);
 
-        $parseProcess = new ParseProcess(
-            $this->telegramApi,
-            $io,
-            $input->getArgument(self::ARGUMENT_CHANNEL)
-        );
+        $source = $input->getArgument(self::ARGUMENT_CHANNEL);
+
+        if (strpos($source, '@') === 0)
+            $source = substr($source, 1);
+
+        $parseProcess = new ParseProcess($this->telegramApi, $io, $source);
 
         $io->text('Running processes');
 
